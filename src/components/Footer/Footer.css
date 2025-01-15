@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-family: Cabinent Grotesk, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.footer__name {
+  margin: 85px 0 24px 0;
+}
+
+.footer__date {
+  margin: 85px 0 24px 0;
+}

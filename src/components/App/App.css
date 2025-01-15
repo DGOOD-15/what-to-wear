@@ -4,5 +4,15 @@
 .page__content {
   max-width: 1360px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
+  font-family: Cabinent Grotesk, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 627px) {
+  .page__content {
+    max-width: 343px;
+    padding: 0 16px;
+    margin: 0;
+  }
 }
