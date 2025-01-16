@@ -45,11 +45,9 @@ function Header({ handleAddClick, weatherData }) {
       </div>
       <button
         type="button"
-        className="header__mobile_view"
+        className={isMobileMenuOpened ? "header__close" : "header__mobile_view"}
         onClick={toggleMobileMenu}
-      >
-        ☰
-      </button>
+      ></button>
     </header>
   );
 }

@@ -21,6 +21,8 @@
 
 .header__add-clothes-btn {
   margin: 0 20px 0;
+  border: none;
+  background: transparent;
 }
 
 .header__user-container {
@@ -88,5 +90,19 @@
     position: absolute;
     top: auto;
     left: 305px;
+  }
+  .header__close {
+    display: block;
+    background-image: url(../../assets/close-btn-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    z-index: 1;
   }
 }
