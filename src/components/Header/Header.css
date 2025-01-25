@@ -35,6 +35,11 @@
   margin: 0;
 }
 
+.header__profile_link {
+  text-decoration: none;
+  color: #000000;
+}
+
 .header__mobile_view {
   display: none;
 }
@@ -49,7 +54,7 @@
   }
   .header__add-clothes-btn {
     top: auto;
-    margin: 0;
+    margin: 0 0 24px;
     background-color: transparent;
     border: none;
   }
@@ -68,7 +73,7 @@
     align-items: center;
     justify-content: flex-end;
     width: 343px;
-    height: 208px;
+    height: 240px;
     background-color: #fff;
     border-radius: 10px;
     position: absolute;
@@ -98,11 +103,12 @@
     background-position: center;
     border: none;
     background-color: transparent;
-    width: 44px;
-    height: 44px;
+    width: 21px;
+    height: 21px;
     padding: 0;
     position: absolute;
-    right: 0;
+    right: 11px;
+    top: 32px;
     z-index: 1;
   }
 }
