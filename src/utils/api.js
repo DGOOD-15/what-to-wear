@@ -1,9 +1,11 @@
 const baseUrl = "http://localhost:3001";
 
+function checkRes(res) {
+  return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
+}
+
 function getItems() {
-  return fetch(`${baseUrl}/items`).then((res) => {
-    return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
-  });
+  return fetch(`${baseUrl}/items`).then(checkRes);
 }
 
 function addItem({ name, imageUrl, weather }) {
@@ -20,10 +22,6 @@ function deleteCard(cardId) {
   return fetch(`${baseUrl}/items/${cardId}`, {
     method: "DELETE",
   }).then(checkRes);
-}
-
-function checkRes(res) {
-  return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
 }
 
 export { getItems, addItem, deleteCard, checkRes };
