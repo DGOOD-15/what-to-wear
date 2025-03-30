@@ -5,7 +5,7 @@ export default function RegisterModal({
   isOpen,
   onClose,
   handleRegistrationSubmit,
-  handleSignUpLinkClick,
+  handleLoginLinkClick,
 }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -44,13 +44,12 @@ export default function RegisterModal({
   return (
     <ModalWithForm
       title="Sign up"
-      buttonText="Next"
-      buttonTextTwo="Or Log In"
+      buttonText="Sign Up"
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={onRegister}
     >
-      <label htmlFor="email-register" className="modal__label">
+      <label className="modal__label">
         Email*{" "}
         <input
           type="email"
@@ -62,7 +61,7 @@ export default function RegisterModal({
           value={email}
         />
       </label>
-      <label htmlFor="password-register" className="modal__label">
+      <label className="modal__label">
         Password*{" "}
         <input
           type="password"
@@ -74,7 +73,7 @@ export default function RegisterModal({
           value={password}
         />
       </label>
-      <label htmlFor="name" className="modal__label">
+      <label className="modal__label">
         Name{" "}
         <input
           type="text"
@@ -88,7 +87,7 @@ export default function RegisterModal({
           value={name}
         />
       </label>
-      <label htmlFor="avatarUrl" className="modal__label">
+      <label className="modal__label">
         Avatar URL{" "}
         <input
           type="url"
@@ -100,6 +99,13 @@ export default function RegisterModal({
           value={avatar}
         />
       </label>
+      <button
+        type="button"
+        className="modal__button-secondary"
+        onClick={handleLoginLinkClick}
+      >
+        or Log in
+      </button>
     </ModalWithForm>
   );
 }

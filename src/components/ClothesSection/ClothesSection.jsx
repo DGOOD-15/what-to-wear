@@ -31,6 +31,7 @@ function ClothesSection({
               onCardClick={onCardClick}
               isLoggedIn={isLoggedIn}
               onCardLike={onCardLike}
+              currentUser={currentUser}
             />
           );
         })}

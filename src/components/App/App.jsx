@@ -59,13 +59,13 @@ function App() {
   };
 
   const handleLoginLinkClick = () => {
-    closeModal();
-    setActiveModal("signup");
+    closeActiveModal();
+    setActiveModal("login");
   };
 
   const handleSignUpLinkClick = () => {
-    closeModal();
-    setActiveModal("login");
+    closeActiveModal();
+    setActiveModal("sign-up");
   };
 
   const handleEditProfileClick = () => {
@@ -193,6 +193,13 @@ function App() {
     };
   }, [activeModal]);
 
+  useEffect(() => {
+    const jwt = localStorage.getItem("jwt");
+    if (jwt) {
+      handleTokenCheck();
+    }
+  }, []);
+
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <CurrentTemperatureUnitContext.Provider
@@ -206,6 +213,8 @@ function App() {
               handleRegisterClick={handleRegisterClick}
               weatherData={weatherData}
               isLoggedIn={isLoggedIn}
+              handleLoginLinkClick={handleLoginLinkClick}
+              handleSignUpLinkClick={handleSignUpLinkClick}
             />
             <Routes>
               <Route
@@ -256,13 +265,13 @@ function App() {
             isOpen={activeModal === "sign-up"}
             onClose={closeActiveModal}
             handleRegistrationSubmit={handleRegistrationSubmit}
-            handleSignUpLinkClick={handleSignUpLinkClick}
+            handleLoginLinkClick={handleLoginLinkClick}
           />
           <LoginModal
             isOpen={activeModal === "login"}
             onClose={closeActiveModal}
             handleLoginSubmit={handleLoginSubmit}
-            handleLoginLinkClick={handleLoginLinkClick}
+            handleSignUpLinkClick={handleSignUpLinkClick}
           />
           <EditProfileModal
             isOpen={activeModal === "edit-profile"}

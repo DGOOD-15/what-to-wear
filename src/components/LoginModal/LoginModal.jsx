@@ -5,7 +5,7 @@ export default function LoginModal({
   isOpen,
   onClose,
   handleLoginSubmit,
-  handleLoginLinkClick,
+  handleSignUpLinkClick,
 }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -40,7 +40,7 @@ export default function LoginModal({
       onClose={onClose}
       onSubmit={onLogin}
     >
-      <label htmlFor="email-login" className="modal__label">
+      <label className="modal__label">
         Email*{" "}
         <input
           type="email"
@@ -52,7 +52,7 @@ export default function LoginModal({
           value={email}
         />
       </label>
-      <label htmlFor="password-login" className="modal__label">
+      <label className="modal__label">
         Password*{" "}
         <input
           type="password"
@@ -64,6 +64,13 @@ export default function LoginModal({
           value={password}
         />
       </label>
+      <button
+        type="button"
+        className="modal__button-secondary"
+        onClick={handleSignUpLinkClick}
+      >
+        or Sign Up
+      </button>
     </ModalWithForm>
   );
 }

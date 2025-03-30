@@ -87,12 +87,28 @@
 }
 
 .modal__submit {
-  width: 124px;
+  width: 86px;
   height: 36px;
   border-radius: 4px;
   border: none;
   background-color: #0000004d;
   color: #ffffff;
+  padding: 0;
+}
+
+.modal__button-secondary {
+  font-family: Cabinet Grotesk;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: rgba(0, 0, 0, 0.5);
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  bottom: 44px;
+  left: 128px;
+  padding: 0;
 }
 
 @media screen and (max-width: 627px) {
