@@ -10,6 +10,8 @@ function Main({
   clothingItems,
   onCardLike,
   isLoggedIn,
+  currentUser,
+  isLiked,
 }) {
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
   return (
@@ -33,6 +35,7 @@ function Main({
                   onCardClick={onCardClick}
                   onCardLike={onCardLike}
                   isLoggedIn={isLoggedIn}
+                  isLiked={isLiked}
                 />
               );
             })}

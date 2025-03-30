@@ -3,7 +3,7 @@ import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useContext } from "react";
 import CurrentUserContext from "../../contexts/CurrentUserContext";
 import { updateProfile } from "../../utils/api";
-import { useForm } from "../hooks/useForm";
+import { useForm } from "../../Hooks/useForm";
 
 export default function EditProfileModal({
   isOpen,

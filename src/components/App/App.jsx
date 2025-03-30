@@ -226,6 +226,7 @@ function App() {
                     clothingItems={clothingItems}
                     isLoggedIn={isLoggedIn}
                     onCardLike={handleCardLike}
+                    currentUser={currentUser}
                   />
                 }
               ></Route>
