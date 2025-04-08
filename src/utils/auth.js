@@ -1,4 +1,4 @@
-import { baseUrl } from "./api";
+import { baseUrl } from "./constants";
 import { checkRes } from "./api";
 
 export const register = (email, password, name, avatar) => {

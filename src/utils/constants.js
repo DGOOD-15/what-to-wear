@@ -111,3 +111,8 @@ export const coordinates = {
 };
 
 export const APIkey = "2d73c9e4b75fc5ac8b87cff0191ff63f";
+
+export const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://api.wtwr.mine.bz"
+    : "http://localhost:3001";
